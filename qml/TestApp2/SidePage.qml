@@ -8,7 +8,9 @@ Page {
         id: label
         anchors.centerIn: parent
         text: qsTr("Hello world!")
-        visible: false
+        font.pixelSize: 32
+        color: "steelblue"
+        visible: true
     }
 
     Button{
@@ -17,8 +19,8 @@ Page {
             top: label.bottom
             topMargin: 10
         }
-        text: qsTr("Click here!")
+        text: qsTr("OK")
         //onClicked: label.visible = true
-        onClicked: pageStack.push(sidePage)
+        onClicked: pageStack.pop()
     }
 }
